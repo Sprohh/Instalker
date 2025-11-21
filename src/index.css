@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+  --font-family-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  @apply bg-ig-background text-ig-text transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-ig-dark-background text-ig-dark-text;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-700;
+}
